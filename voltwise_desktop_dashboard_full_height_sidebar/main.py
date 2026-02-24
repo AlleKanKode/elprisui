@@ -48,26 +48,26 @@ def create_sidebar():
     with ui.element('aside').classes('w-72 bg-[#f8faf9] border-r border-nordic-gray h-screen sticky top-0 flex flex-col p-8 flex-shrink-0'):
         with ui.element('div').classes('flex items-center gap-3 mb-12'):
             with ui.element('div').classes('bg-primary p-2 rounded-lg shadow-sm'):
-                ui.element('span').classes('material-symbols-outlined text-black block').classes('').append(ui.label('bolt'))
-            ui.element('h1').classes('text-2xl font-extrabold tracking-tight').classes('').append(ui.label('VoltWise'))
+                ui.label('bolt').classes('material-symbols-outlined text-black block')
+            ui.label('VoltWise').classes('text-2xl font-extrabold tracking-tight')
         
         with ui.element('nav').classes('flex-1 space-y-2'):
             with ui.link(target='#').classes('flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary-dark rounded-xl font-bold transition-colors'):
-                ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('dashboard'))
+                ui.label('dashboard').classes('material-symbols-outlined')
                 ui.label('Dashboard')
             with ui.link(target='#').classes('flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-background-light hover:text-[#0d1c12] rounded-xl font-semibold transition-colors'):
-                ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('history'))
+                ui.label('history').classes('material-symbols-outlined')
                 ui.label('Historik')
             with ui.link(target='#').classes('flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-background-light hover:text-[#0d1c12] rounded-xl font-semibold transition-colors'):
-                ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('devices'))
+                ui.label('devices').classes('material-symbols-outlined')
                 ui.label('Enheder')
             with ui.link(target='#').classes('flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-background-light hover:text-[#0d1c12] rounded-xl font-semibold transition-colors'):
-                ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('person'))
+                ui.label('person').classes('material-symbols-outlined')
                 ui.label('Profil')
                 
         with ui.element('div').classes('pt-8 border-t border-nordic-gray mt-auto'):
             with ui.link(target='#').classes('flex items-center gap-3 px-4 py-3 text-gray-500 hover:bg-background-light hover:text-[#0d1c12] rounded-xl font-semibold transition-colors'):
-                ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('settings'))
+                ui.label('settings').classes('material-symbols-outlined')
                 ui.label('Indstillinger')
 
 def create_main_content():
@@ -77,7 +77,7 @@ def create_main_content():
             ui.element('div').classes('flex items-center gap-6')
             with ui.element('div').classes('flex items-center gap-4'):
                 with ui.element('button').classes('p-2 hover:bg-background-light rounded-full transition-colors'):
-                    ui.element('span').classes('material-symbols-outlined text-gray-600').classes('').append(ui.label('notifications'))
+                    ui.label('notifications').classes('material-symbols-outlined text-gray-600')
                 ui.element('div').classes('w-10 h-10 rounded-full bg-nordic-gray overflow-hidden border border-nordic-gray').style("background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzYwTRHD7eBsRfu-BhXlfSEeOvNq0yeUEPwwhbowu1VHthaRqxOtG9tMgOnragTGNp0OtUGESb4POKChOsOT_FQkmmUNynqjGPPlrPY5vcqQbABA3H1G8AG2eQPaySxEGAUIh6c7pgAdLgAzpzn9bflXHK_yHLnvRXhEjr1R-7Wk3DH7Q_klqbYIAX9SEsvNXrQFl_eWacMHVSoRK3Xxj-jvBmofvDNLbGyQMiGH0fymIKg5p4OHFR2pf9Yx9dEdvygxzy704Q6Xo'); background-size: cover;")
 
         with ui.element('div').classes('grid grid-cols-1 lg:grid-cols-12 gap-12'):
@@ -87,44 +87,44 @@ def create_main_content():
                 with ui.element('section').classes('relative py-20 rounded-xl flex flex-col items-center justify-center text-center status-glow'):
                     with ui.element('div').classes('mb-4 inline-flex items-center gap-2 px-3 py-1 bg-primary/20 rounded-full border border-primary/30'):
                         ui.element('span').classes('w-2 h-2 rounded-full bg-primary animate-pulse')
-                        ui.element('span').classes('text-xs font-bold uppercase tracking-widest text-primary-dark').classes('').append(ui.label('Status: Grøn strøm netop nu'))
+                        ui.label('Status: Grøn strøm netop nu').classes('text-xs font-bold uppercase tracking-widest text-primary-dark')
                     
                     with ui.element('div').classes('flex flex-col items-center'):
-                        ui.element('span').classes('text-gray-500 font-medium mb-1').classes('').append(ui.label('Nuværende pris'))
+                        ui.label('Nuværende pris').classes('text-gray-500 font-medium mb-1')
                         with ui.element('h2').classes('text-7xl font-black tracking-tighter text-[#0d1c12]'):
                             ui.label('2,45').classes('inline')
-                            ui.element('span').classes('text-3xl font-bold opacity-60 ml-2').classes('').append(ui.label('kr. pr. kWh'))
+                            ui.label('kr. pr. kWh').classes('text-3xl font-bold opacity-60 ml-2 inline')
                             
                     with ui.element('button').classes('mt-10 flex items-center gap-2 bg-[#0d1c12] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform'):
-                        ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('refresh'))
+                        ui.label('refresh').classes('material-symbols-outlined')
                         ui.label('Opdater pris')
                 
                 # Smart Delay Section
                 with ui.element('section'):
                     with ui.element('div').classes('flex items-center justify-between mb-8'):
                         with ui.element('div'):
-                            ui.element('h3').classes('text-2xl font-bold mb-1').classes('').append(ui.label('Smart Delay'))
-                            ui.element('p').classes('text-gray-500').classes('').append(ui.label('Optimér dit forbrug og spar penge ved at vente.'))
+                            ui.label('Smart Delay').classes('text-2xl font-bold mb-1')
+                            ui.label('Optimér dit forbrug og spar penge ved at vente.').classes('text-gray-500')
                         with ui.element('button').classes('text-primary-dark font-bold text-sm flex items-center gap-1 hover:underline'):
                             ui.label('Se alle enheder')
-                            ui.element('span').classes('material-symbols-outlined text-sm').classes('').append(ui.label('arrow_forward'))
+                            ui.label('arrow_forward').classes('material-symbols-outlined text-sm')
                             
                     with ui.element('div').classes('grid grid-cols-1 md:grid-cols-3 gap-6'):
                         def create_card(icon, title, price_now, price_later, saving):
                             with ui.element('div').classes('bg-white border border-nordic-gray rounded-xl p-6 flex flex-col hover:shadow-xl hover:shadow-primary/5 transition-all'):
                                 with ui.element('div').classes('w-12 h-12 bg-background-light rounded-lg flex items-center justify-center mb-6'):
-                                    ui.element('span').classes('material-symbols-outlined text-primary-dark').text(icon)
-                                ui.element('h4').classes('text-lg font-bold mb-4').text(title)
+                                    ui.label(icon).classes('material-symbols-outlined text-primary-dark')
+                                ui.label(title).classes('text-lg font-bold mb-4')
                                 with ui.element('div').classes('space-y-3 mb-8'):
                                     with ui.element('div').classes('flex justify-between text-sm'):
-                                        ui.element('span').classes('text-gray-500').classes('').append(ui.label('Start nu'))
-                                        ui.element('span').classes('font-semibold').text(price_now)
+                                        ui.label('Start nu').classes('text-gray-500')
+                                        ui.label(price_now).classes('font-semibold')
                                     with ui.element('div').classes('flex justify-between text-sm'):
-                                        ui.element('span').classes('text-gray-500').classes('').append(ui.label('Vent og spar'))
-                                        ui.element('span').classes('font-semibold text-primary-dark').text(price_later)
+                                        ui.label('Vent og spar').classes('text-gray-500')
+                                        ui.label(price_later).classes('font-semibold text-primary-dark')
                                 with ui.element('div').classes('mt-auto space-y-3'):
-                                    ui.element('div').classes('bg-primary/10 border border-primary/30 text-primary-dark text-xs font-bold py-1 px-3 rounded-full w-fit').text(f'Spar {saving}')
-                                    ui.element('button').classes('w-full bg-[#0d1c12] text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors').classes('').append(ui.label('Vent til kl. 01:00'))
+                                    ui.label(f'Spar {saving}').classes('bg-primary/10 border border-primary/30 text-primary-dark text-xs font-bold py-1 px-3 rounded-full w-fit')
+                                    ui.label('Vent til kl. 01:00').classes('w-full bg-[#0d1c12] text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition-colors text-center')
 
                         create_card('dishwasher', 'Opvaskemaskine', '4,50 kr.', '1,20 kr.', '3,30 kr.')
                         create_card('dry_cleaning', 'Tørretumbler', '6,20 kr.', '2,10 kr.', '4,10 kr.')
@@ -134,61 +134,61 @@ def create_main_content():
                 with ui.element('section').classes('bg-background-light p-8 rounded-xl flex items-center justify-between'):
                     with ui.element('div').classes('flex items-center gap-6'):
                         with ui.element('div').classes('w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm'):
-                            ui.element('span').classes('material-symbols-outlined text-4xl text-yellow-500').classes('').append(ui.label('emoji_events'))
+                            ui.label('emoji_events').classes('material-symbols-outlined text-4xl text-yellow-500')
                         with ui.element('div'):
-                            ui.element('h3').classes('text-xl font-bold').classes('').append(ui.label('Har du en god grøn stime?'))
-                            ui.element('p').classes('text-gray-500').classes('').append(ui.label('Del dine resultater og inspirér andre til at spare.'))
+                            ui.label('Har du en god grøn stime?').classes('text-xl font-bold')
+                            ui.label('Del dine resultater og inspirér andre til at spare.').classes('text-gray-500')
                     with ui.element('button').classes('bg-primary text-black px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform'):
-                        ui.element('span').classes('material-symbols-outlined').classes('').append(ui.label('share'))
+                        ui.label('share').classes('material-symbols-outlined')
                         ui.label('Del min besparelse')
 
             # Sidebar: Impact
             with ui.element('aside').classes('lg:col-span-3 space-y-8 h-full flex-shrink-0'):
                 with ui.element('div').classes('bg-background-light rounded-xl p-8 border border-nordic-gray sticky top-8'):
                     with ui.element('h3').classes('text-xl font-bold mb-8 flex items-center gap-2'):
-                        ui.element('span').classes('material-symbols-outlined text-primary-dark').classes('').append(ui.label('monitoring'))
+                        ui.label('monitoring').classes('material-symbols-outlined text-primary-dark')
                         ui.label('Din Impact')
                     
                     # Savings Money
                     with ui.element('div').classes('mb-10'):
                         with ui.element('div').classes('flex items-center gap-2 text-gray-500 text-sm mb-2'):
-                            ui.element('span').classes('material-symbols-outlined text-sm').classes('').append(ui.label('savings'))
+                            ui.label('savings').classes('material-symbols-outlined text-sm')
                             ui.label('Livstidsbesparelse')
                         with ui.element('div').classes('text-3xl font-black text-[#0d1c12]'):
                             ui.label('1.245,50 ').classes('inline')
-                            ui.element('span').classes('text-lg font-bold opacity-60').classes('').append(ui.label('kr.'))
+                            ui.label('kr.').classes('text-lg font-bold opacity-60 inline')
                         with ui.element('div').classes('mt-4 h-2 bg-nordic-gray rounded-full overflow-hidden'):
                             ui.element('div').classes('bg-primary h-full w-[65%]').props('data-alt="Progress bar showing savings toward monthly goal"')
-                        ui.element('p').classes('text-xs text-gray-500 mt-2 font-medium').classes('').append(ui.label('65% af dit månedlige mål nået'))
+                        ui.label('65% af dit månedlige mål nået').classes('text-xs text-gray-500 mt-2 font-medium')
 
                     # CO2 Reduction
                     with ui.element('div').classes('mb-10'):
                         with ui.element('div').classes('flex items-center gap-2 text-gray-500 text-sm mb-2'):
-                            ui.element('span').classes('material-symbols-outlined text-sm').classes('').append(ui.label('eco'))
+                            ui.label('eco').classes('material-symbols-outlined text-sm')
                             ui.label('CO2-reduktion')
                         with ui.element('div').classes('text-3xl font-black text-[#0d1c12]'):
                             ui.label('342 ').classes('inline')
-                            ui.element('span').classes('text-lg font-bold opacity-60').classes('').append(ui.label('kg.'))
+                            ui.label('kg.').classes('text-lg font-bold opacity-60 inline')
                         with ui.element('p').classes('text-xs text-gray-500 mt-2 font-medium'):
                             ui.label('Svarer til at plante ').classes('inline')
-                            ui.element('span').classes('text-primary-dark font-bold').classes('').append(ui.label('14 træer'))
+                            ui.label('14 træer').classes('text-primary-dark font-bold inline')
                             ui.label(' 🌲').classes('inline')
 
                     # Stats Breakdown
                     with ui.element('div').classes('space-y-4 pt-8 border-t border-nordic-gray'):
                         with ui.element('div').classes('flex items-center justify-between text-sm'):
-                            ui.element('span').classes('text-gray-500').classes('').append(ui.label('Grøn strøm %'))
-                            ui.element('span').classes('font-bold text-primary-dark').classes('').append(ui.label('92%'))
+                            ui.label('Grøn strøm %').classes('text-gray-500')
+                            ui.label('92%').classes('font-bold text-primary-dark')
                         with ui.element('div').classes('flex items-center justify-between text-sm'):
-                            ui.element('span').classes('text-gray-500').classes('').append(ui.label('Månedlig rank'))
-                            ui.element('span').classes('font-bold text-[#0d1c12]').classes('').append(ui.label('#12 i Aarhus'))
+                            ui.label('Månedlig rank').classes('text-gray-500')
+                            ui.label('#12 i Aarhus').classes('font-bold text-[#0d1c12]')
                     
                     # CTA Sidebar
-                    ui.element('button').classes('w-full mt-10 bg-white border border-nordic-gray py-3 rounded-lg text-sm font-bold hover:bg-gray-50 transition-colors').classes('').append(ui.label('Se fuld historik'))
+                    ui.label('Se fuld historik').classes('w-full mt-10 bg-white border border-nordic-gray py-3 rounded-lg text-sm font-bold hover:bg-gray-50 transition-colors text-center block cursor-pointer')
 
         # Footer
         with ui.element('footer').classes('mt-20 pt-12 border-t border-nordic-gray text-center text-gray-400 text-sm pb-12'):
-            ui.element('p').classes('').append(ui.label('© 2024 VoltWise. Skabt med fokus på fremtidens energi.'))
+            ui.label('© 2024 VoltWise. Skabt med fokus på fremtidens energi.')
 
 @ui.page('/')
 def index():
