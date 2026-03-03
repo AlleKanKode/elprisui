@@ -95,7 +95,7 @@ def create_main_content():
                             ui.label('2,45').classes('inline')
                             ui.label('kr. pr. kWh').classes('text-3xl font-bold opacity-60 ml-2 inline')
                             
-                    with ui.button(color=None).props('unelevated no-caps padding="none"').classes('mt-10 flex items-center gap-2 bg-[#0d1c12] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform'):
+                    with ui.button(color=None, on_click=lambda: print("Opdaterer prisen...")).props('unelevated no-caps padding="none"').classes('mt-10 flex items-center gap-2 bg-[#0d1c12] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform'):
                         ui.label('refresh').classes('material-symbols-outlined')
                         ui.label('Opdater pris')
                 
