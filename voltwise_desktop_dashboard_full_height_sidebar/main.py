@@ -76,7 +76,7 @@ def create_main_content():
         with ui.element('header').classes('flex items-center justify-between mb-12 w-full'):
             ui.element('div').classes('flex items-center gap-6')
             with ui.element('div').classes('flex items-center gap-4'):
-                with ui.element('button').classes('p-2 hover:bg-background-light rounded-full transition-colors'):
+                with ui.button(color=None).props('unelevated no-caps padding="none"').classes('p-2 hover:bg-background-light rounded-full transition-colors'):
                     ui.label('notifications').classes('material-symbols-outlined text-gray-600')
                 ui.element('div').classes('w-10 h-10 rounded-full bg-nordic-gray overflow-hidden border border-nordic-gray').style("background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzYwTRHD7eBsRfu-BhXlfSEeOvNq0yeUEPwwhbowu1VHthaRqxOtG9tMgOnragTGNp0OtUGESb4POKChOsOT_FQkmmUNynqjGPPlrPY5vcqQbABA3H1G8AG2eQPaySxEGAUIh6c7pgAdLgAzpzn9bflXHK_yHLnvRXhEjr1R-7Wk3DH7Q_klqbYIAX9SEsvNXrQFl_eWacMHVSoRK3Xxj-jvBmofvDNLbGyQMiGH0fymIKg5p4OHFR2pf9Yx9dEdvygxzy704Q6Xo'); background-size: cover;")
 
@@ -95,7 +95,7 @@ def create_main_content():
                             ui.label('2,45').classes('inline')
                             ui.label('kr. pr. kWh').classes('text-3xl font-bold opacity-60 ml-2 inline')
                             
-                    with ui.element('button').classes('mt-10 flex items-center gap-2 bg-[#0d1c12] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform'):
+                    with ui.button(color=None).props('unelevated no-caps padding="none"').classes('mt-10 flex items-center gap-2 bg-[#0d1c12] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform'):
                         ui.label('refresh').classes('material-symbols-outlined')
                         ui.label('Opdater pris')
                 
@@ -105,7 +105,7 @@ def create_main_content():
                         with ui.element('div'):
                             ui.label('Smart Delay').classes('text-2xl font-bold mb-1')
                             ui.label('Optimér dit forbrug og spar penge ved at vente.').classes('text-gray-500')
-                        with ui.element('button').classes('text-primary-dark font-bold text-sm flex items-center gap-1 hover:underline'):
+                        with ui.button(color=None).props('unelevated no-caps padding="none" ripple="false"').classes('text-primary-dark font-bold text-sm flex items-center gap-1 hover:underline'):
                             ui.label('Se alle enheder')
                             ui.label('arrow_forward').classes('material-symbols-outlined text-sm')
                             
@@ -138,7 +138,7 @@ def create_main_content():
                         with ui.element('div'):
                             ui.label('Har du en god grøn stime?').classes('text-xl font-bold')
                             ui.label('Del dine resultater og inspirér andre til at spare.').classes('text-gray-500')
-                    with ui.element('button').classes('bg-primary text-black px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform'):
+                    with ui.button(color=None).props('unelevated no-caps padding="none"').classes('bg-primary text-black px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform'):
                         ui.label('share').classes('material-symbols-outlined')
                         ui.label('Del min besparelse')
 
