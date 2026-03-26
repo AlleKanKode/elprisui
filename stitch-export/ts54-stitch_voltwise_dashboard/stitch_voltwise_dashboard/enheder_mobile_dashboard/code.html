@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df259",
+              "primary-fixed-dim": "#00e553",
+              "primary-fixed": "#6dff7e",
+              "tertiary": "#7f552e",
+              "tertiary-fixed-dim": "#f2bc8c",
+              "on-background": "#0d1c12",
+              "error": "#ba1a1a",
+              "background": "#ffffff",
+              "secondary-fixed-dim": "#7adc7f",
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#293328",
+              "surface-container-high": "#e1e8e3",
+              "on-primary-fixed-variant": "#005318",
+              "on-tertiary-fixed": "#2d1600",
+              "inverse-on-surface": "#e9f4e3",
+              "primary-container": "#0df259",
+              "outline": "#e1e8e3",
+              "on-tertiary-container": "#7a512a",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#000000",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#96f999",
+              "on-surface": "#0d1c12",
+              "surface-bright": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container": "#f1fdeb",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#027526",
+              "secondary": "#0a8a35",
+              "on-tertiary-fixed-variant": "#643e19",
+              "on-surface-variant": "#3b4b3a",
+              "surface-tint": "#006e23",
+              "on-secondary-fixed": "#002106",
+              "on-primary-fixed": "#002106",
+              "on-secondary-fixed-variant": "#005318",
+              "inverse-primary": "#00e553",
+              "surface-dim": "#f5f8f6",
+              "surface-container-highest": "#0d1c12",
+              "on-primary-container": "#0a8a35",
+              "secondary-fixed": "#96f999",
+              "tertiary-container": "#ffc796",
+              "outline-variant": "#bacbb5",
+              "surface-variant": "#e1e8e3",
+              "surface-container-low": "#f8faf9",
+              "surface": "#ffffff",
+              "tertiary-fixed": "#ffdcc0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .status-glow {
+            background: radial-gradient(circle, rgba(13, 242, 89, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background antialiased pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-40 bg-white dark:bg-zinc-950 shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-on-background">menu</span>
+</button>
+<h1 class="font-manrope font-black tracking-tight text-2xl text-zinc-900 dark:text-white">Enheder</h1>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" data-alt="Close-up portrait of a professional man in a modern office setting with soft natural light and blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDReUJFWLPwQZKbhp9HbMx13PKH8PshiccmY2G8cGykrL7-OZ40btKRncdKzd_SiRdl_zC5tGl1_D23G53k24BoJeneNqRLCYKLyC81xRnkANVbhAbPbSjtUTjPOPDH2ZTdpaLEriorZZN_vVQQphZ0kJiUFOy6-hnrqebiAL2oPxxJfK22gm3pZdiqSF29SUW6tx5I99WI5ic8pknXy_eDZdz-cIQ7ZCDJ9F_Y7CWXVZZqp5qjsaqvw0XinIktMU9cKA3QlZjexo8"/>
+</div>
+</div>
+</div>
+</header>
+<main class="px-6 pt-8 max-w-lg mx-auto relative overflow-hidden">
+<!-- Status Glow Background -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-64 status-glow -z-10"></div>
+<!-- Section Header -->
+<div class="mb-8">
+<span class="font-label text-xs uppercase tracking-[0.1em] text-secondary font-bold mb-2 block">Dine Forbundne Enheder</span>
+<h2 class="font-headline text-3xl font-extrabold tracking-tight">Styr dit forbrug</h2>
+<p class="text-on-surface-variant mt-2 text-sm leading-relaxed">Administrer dine højtydende apparater og optimer din energiøkonomi med præcision.</p>
+</div>
+<!-- Device Grid/List -->
+<div class="space-y-4">
+<!-- Device Card: Elbil -->
+<div class="bg-white border border-outline rounded-xl p-5 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">electric_car</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-background leading-tight">Elbil</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant">Oplader • 22kW</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Device Card: Opvaskemaskine -->
+<div class="bg-white border border-outline rounded-xl p-5 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-zinc-400">
+<span class="material-symbols-outlined text-3xl">dishwasher</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-background leading-tight">Opvaskemaskine</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant">Afventer • Planlagt 02:00</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Device Card: Tørretumbler -->
+<div class="bg-white border border-outline rounded-xl p-5 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-zinc-400">
+<span class="material-symbols-outlined text-3xl">laundry</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-background leading-tight">Tørretumbler</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant">Inaktiv</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Device Card: Varmepumpe -->
+<div class="bg-white border border-outline rounded-xl p-5 flex items-center justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">heat_pump</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-background leading-tight">Varmepumpe</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-xs font-label uppercase tracking-wider text-on-surface-variant">Aktiv • 21°C</span>
+</div>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Add New Device Placeholder Card (Asymmetric Layout Feel) -->
+<div class="mt-8 p-6 bg-surface-container-low rounded-2xl border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-3 text-center">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant">add_circle</span>
+</div>
+<div>
+<p class="font-bold text-on-background">Tilføj flere enheder</p>
+<p class="text-xs text-on-surface-variant mt-1">Forbind dine smart-hjem enheder for automatisk optimering.</p>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-28 w-14 h-14 bg-on-background text-white rounded-xl shadow-2xl flex items-center justify-center active:scale-95 transition-transform z-50">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-3 pb-8 px-4 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800">
+<!-- Hjem -->
+<a class="text-zinc-400 dark:text-zinc-600 flex flex-col items-center gap-1 active:bg-zinc-50 dark:active:bg-zinc-900 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Hjem</span>
+</a>
+<!-- Enheder (Active) -->
+<a class="text-zinc-900 dark:text-white flex flex-col items-center gap-1 after:content-[''] after:w-1 after:h-1 after:bg-lime-400 after:rounded-full active:bg-zinc-50 dark:active:bg-zinc-900 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">devices</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Enheder</span>
+</a>
+<!-- Energi -->
+<a class="text-zinc-400 dark:text-zinc-600 flex flex-col items-center gap-1 active:bg-zinc-50 dark:active:bg-zinc-900 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">electric_bolt</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Energi</span>
+</a>
+<!-- Profil -->
+<a class="text-zinc-400 dark:text-zinc-600 flex flex-col items-center gap-1 active:bg-zinc-50 dark:active:bg-zinc-900 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Profil</span>
+</a>
+</nav>
+</body></html>

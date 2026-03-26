@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="da"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VoltWise Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "neutral-soft": "#e8f2eb",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1.25rem", // 20px
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .status-glow {
+            box-shadow: 0 0 40px rgba(13, 242, 89, 0.15);
+        }
+        .gauge-gradient {
+            background: conic-gradient(from 180deg at 50% 50%, #0df259 0deg, #0df259 120deg, #e8f2eb 120deg, #e8f2eb 360deg);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex justify-center items-start">
+<!-- Mobile Device Mockup Container -->
+<div class="w-full max-w-[430px] min-h-screen bg-white dark:bg-slate-900 shadow-2xl relative overflow-hidden flex flex-col">
+<!-- Status Bar Space (iOS) -->
+<div class="h-12 w-full"></div>
+<!-- Gamification Bar -->
+<div class="px-5 mb-6">
+<div class="bg-primary/10 dark:bg-primary/5 border border-primary/20 rounded-full py-2.5 px-4 flex items-center justify-center gap-2">
+<span class="text-primary font-bold text-sm flex items-center">
+<span class="material-icons-round text-lg mr-1">bolt</span>
+                    5 dage i træk med grøn strøm!
+                </span>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto hide-scrollbar px-5 pb-32">
+<!-- Hero Section: Circular Gauge -->
+<div class="relative flex flex-col items-center justify-center py-8 mb-4">
+<div class="relative w-64 h-64 flex items-center justify-center">
+<!-- Gauge Background/Outer Ring -->
+<div class="absolute inset-0 rounded-full border-[12px] border-neutral-soft dark:border-slate-800"></div>
+<!-- Gauge Active Part (Simplified for HTML) -->
+<div class="absolute inset-0 rounded-full border-[12px] border-transparent border-t-primary border-r-primary rotate-45"></div>
+<!-- Status Glow Effect -->
+<div class="absolute inset-4 rounded-full bg-primary/5 status-glow flex flex-col items-center justify-center text-center">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">Pris lige nu</span>
+<div class="text-4xl font-extrabold tracking-tight">2,45 <span class="text-lg font-bold">kr.</span></div>
+<span class="text-sm font-medium text-slate-400 mt-1">pr. kWh</span>
+</div>
+</div>
+<!-- Status Label Below Gauge -->
+<div class="mt-6 flex items-center gap-2 bg-primary px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-tight">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+</span>
+                    Billig Energi Nu
+                </div>
+</div>
+<!-- Smart Delay Module Section -->
+<div class="space-y-4">
+<div class="flex items-center justify-between mb-2">
+<h2 class="text-lg font-extrabold tracking-tight">Smart Delay</h2>
+<button class="text-primary text-sm font-bold">Se alle</button>
+</div>
+<!-- Appliance Card 1: Opvaskemaskine -->
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-5 border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-white dark:bg-slate-700 flex items-center justify-center shadow-sm">
+<span class="material-icons-round text-slate-600 dark:text-slate-300">flatware</span>
+</div>
+<div>
+<h3 class="font-bold text-base">Opvaskemaskine</h3>
+<p class="text-xs text-slate-500 font-medium">Anbefalet kørsel</p>
+</div>
+</div>
+<div class="bg-primary text-white text-[11px] font-black px-3 py-1.5 rounded-full shadow-sm">
+                            SPAR 3,30 KR.
+                        </div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-200/50 dark:border-slate-700/50">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Nu</span>
+<span class="font-bold text-sm">4,50 kr.</span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] uppercase font-bold text-primary tracking-wider">Kl. 01:00</span>
+<span class="font-bold text-sm">1,20 kr.</span>
+</div>
+</div>
+</div>
+<!-- Appliance Card 2: Tørretumbler -->
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-5 border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-white dark:bg-slate-700 flex items-center justify-center shadow-sm">
+<span class="material-icons-round text-slate-600 dark:text-slate-300">dry_cleaning</span>
+</div>
+<div>
+<h3 class="font-bold text-base">Tørretumbler</h3>
+<p class="text-xs text-slate-500 font-medium">Anbefalet kørsel</p>
+</div>
+</div>
+<div class="bg-primary text-white text-[11px] font-black px-3 py-1.5 rounded-full shadow-sm">
+                            SPAR 4,10 KR.
+                        </div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-200/50 dark:border-slate-700/50">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Nu</span>
+<span class="font-bold text-sm">5,80 kr.</span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] uppercase font-bold text-primary tracking-wider">Kl. 01:00</span>
+<span class="font-bold text-sm">1,70 kr.</span>
+</div>
+</div>
+</div>
+<!-- Appliance Card 3: Elbil -->
+<div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-5 border border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-white dark:bg-slate-700 flex items-center justify-center shadow-sm">
+<span class="material-icons-round text-slate-600 dark:text-slate-300">electric_car</span>
+</div>
+<div>
+<h3 class="font-bold text-base">Elbil</h3>
+<p class="text-xs text-slate-500 font-medium">Smart opladning</p>
+</div>
+</div>
+<div class="bg-primary text-white text-[11px] font-black px-3 py-1.5 rounded-full shadow-sm">
+                            SPAR 28,50 KR.
+                        </div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-200/50 dark:border-slate-700/50">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Nu</span>
+<span class="font-bold text-sm">45,00 kr.</span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] uppercase font-bold text-primary tracking-wider">Kl. 01:00</span>
+<span class="font-bold text-sm">16,50 kr.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action & Navigation -->
+<div class="absolute bottom-0 left-0 right-0 p-6 pt-0 bg-gradient-to-t from-white via-white/95 to-transparent dark:from-slate-900 dark:via-slate-900/95 dark:to-transparent">
+<!-- Trophy Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-4 flex items-center justify-center gap-3 shadow-xl shadow-primary/20 transition-all active:scale-[0.98] mb-6">
+<span class="material-icons-round">emoji_events</span>
+<span class="font-extrabold tracking-tight">Del min besparelse</span>
+</button>
+<!-- Navigation Tab Bar -->
+<div class="flex justify-around items-center px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-full border border-slate-100 dark:border-slate-700">
+<button class="p-2 text-primary">
+<span class="material-icons-round">home</span>
+</button>
+<button class="p-2 text-slate-400 dark:text-slate-500">
+<span class="material-icons-round">insights</span>
+</button>
+<button class="p-2 text-slate-400 dark:text-slate-500">
+<span class="material-icons-round">notifications_none</span>
+</button>
+<button class="p-2 text-slate-400 dark:text-slate-500">
+<span class="material-icons-round">settings</span>
+</button>
+</div>
+<!-- Safe Area Indicator -->
+<div class="mt-4 flex justify-center">
+<div class="w-32 h-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</div>
+<!-- Mock Background Image Overlay (Abstract Nordic Pattern) -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute top-1/2 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</div>
+</body></html>
